@@ -1,6 +1,6 @@
 ## Summary
 
-(<i> Recipe Retriever </i>) is a simple android app designed for college students that want to input different ingredients into the app and produce recipes to match.
+<i> Recipe Retriever </i> is a simple android app designed for college students that want to input different ingredients into the app and produce recipes to match.
 
 ## Intended users
 
