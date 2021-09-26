@@ -1,3 +1,3 @@
-# Android project proposal starter
+# Recipe Retriever
 
-This is a project template for all phases&mdash;from proposal to final delivery&mdash;of the personal Android project in the [Deep Dive Coding](https://deepdivecoding.com/) [Java + Android bootcamp](https://deepdivecoding.com/java-android/).
+This is app is used to search for recipe's and to save and share for later use.
