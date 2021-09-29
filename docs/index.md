@@ -1,12 +1,12 @@
 ## Summary
 
-<i> Recipe Retriever </i> is a simple android app designed for college students that want to input different ingredients into the app and produce recipes to match.
+<i> Recipe Retriever </i> is a simple android app designed for anyone that wants to input different ingredients into the app and produce recipes to match.
 
 ## Intended users
 
-* College students looking to save money and use the ingredients they readily have on hand.
+* Struggling adults or families looking to save money and use the ingredients they readily have on hand.
 
-  > As a college student looking to save money, eating habits are at the top of the list. With this app, college students have a way to use up the ingredients they readily have on hand and save money on additional ingredients needed to complete the recipe.
+  > Eating habits are at the top of the list of things that drain our money. With this app, college students, young adults and even families have a way to use up the ingredients they readily have on hand and save money on additional ingredients needed to complete the recipe.
     
 * College students looking to meal prep and save time cooking.
 
@@ -14,22 +14,24 @@
     
 ## Functionality
 
-* Saves time for the user looking up recipes that includes specific ingredients.
+* App creates different recipes for the user when they input different ingredients.
 
 * User-friendly operation, allowing anyone to use the app.
 
-* Ability to save recipes for future use.
+* Ability to save specific recipes for future use.
 
-* Database full of different recipes so that user has multiple options.
+* Database has several recipes from different cooking websites so that the user has multiple options.
 
 ## Persistent data
 
-TBD 
+* List of recipes. 
 
 ## Device/external services
 
-TBD
+* Mobile android device with internet access.
 
 ## Stretch goals/possible enhancements 
 
-TBD
+* User will have multiple options of recipes that can help the user save time on deciding what to cook and being able to better prepare the ingredients for later use.
+
+* User will be able to track what they're spending their money on which in turn can possibly help save money.
