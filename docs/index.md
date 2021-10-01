@@ -28,7 +28,9 @@
 
 ## Device/external services
 
-* Mobile android device with internet access.
+* <a href="https://www.delish.com/cooking/recipe-ideas/">
+  Recipe's API
+</a>
 
 ## Stretch goals/possible enhancements 
 
