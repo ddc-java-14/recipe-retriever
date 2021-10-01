@@ -29,7 +29,7 @@
 ## Device/external services
 
 * <a href="https://www.delish.com/cooking/recipe-ideas/">
-  Recipe's API
+  Recipes to look through API
 </a>
 
 ## Stretch goals/possible enhancements 
