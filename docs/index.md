@@ -28,9 +28,7 @@
 
 ## Device/external services
 
-* <a href="https://www.delish.com/cooking/recipe-ideas/">
-  Recipes to look through API
-</a>
+* User will need to be able to access an outside search engine to look up recipes by the ingredients.
 
 ## Stretch goals/possible enhancements 
 
