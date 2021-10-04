@@ -28,7 +28,7 @@
 
 ## Device/external services
 
-* <p> <a href="http://www.recipepuppy.com/">
+* <p> <a href="https://developer.edamam.com/recipe-demo">
   Recipe's API
 </a> </p>
 
