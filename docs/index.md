@@ -28,7 +28,9 @@
 
 ## Device/external services
 
-* User will need to be able to access an outside search engine to look up recipes by the ingredients.
+* <p> <a href="http://www.recipepuppy.com/">
+  Recipe's API
+</a> </p>
 
 ## Stretch goals/possible enhancements 
 
