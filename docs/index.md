@@ -28,9 +28,11 @@
 
 ## Device/external services
 
-* <p> <a href="https://developer.edamam.com/recipe-demo">
+* <p> <a href="https://developer.edamam.com/edamam-docs-recipe-api">
   Recipe's API
 </a> </p>
+
+
 
 ## Stretch goals/possible enhancements 
 
