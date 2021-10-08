@@ -6,11 +6,11 @@
 
 * Struggling adults or families looking to save money and use the ingredients they readily have on hand.
 
-  > Eating habits are at the top of the list of things that drain our money. With this app, college students, young adults and even families have a way to use up the ingredients they readily have on hand and save money on additional ingredients needed to complete the recipe.
+  > As someone struggling to save money, eating habits are at the top of the list of things that drain our money. With this app, college students, young adults and even families have a way to use up the ingredients they readily have on hand and save money on additional ingredients needed to complete the recipe.
 
 * College students looking to meal prep and save time cooking.
 
-  > Being in college, you know that time is everything and saving time when you can is a big advantage. With this app you can look up fast and easy recipe's for meal prepping your breakfast, lunch and dinner for the day to save time and focus on studying instead of cooking.
+  > As a college student, you know that time is everything and saving time when you can is a big advantage. With this app you can look up fast and easy recipes for meal prepping your breakfast, lunch and dinner for the day to save time and focus on studying instead of cooking.
 
 ## Functionality
 
