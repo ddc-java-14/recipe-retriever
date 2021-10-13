@@ -32,9 +32,9 @@
 
 * [Recipe's API](https://spoonacular.com/food-api/docs)
 
-* [Wireframe](docs/wireframe.md)
+* [Wireframe](wireframe.md)
 
-* [ERD](docs/erd.md)
+* [ERD](erd.md)
 
 ## Stretch goals/possible enhancements
 
