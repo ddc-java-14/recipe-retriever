@@ -1,6 +1,6 @@
 ## Summary
 
-<i> Recipe Retriever </i> is a simple android app designed for anyone that wants to input different ingredients into the app and produce recipes to match.
+<i> Recipe Retriever </i> is a simple android app designed for anyone that wants to input different cuisine types into the app and produce recipes to select from.
 
 ## Intended users
 
@@ -14,26 +14,30 @@
 
 ## Functionality
 
-* App creates different recipes for the user when they input different ingredients.
+* App creates different recipes for the user when they input different cuisine types.
 
 * User-friendly operation, allowing anyone to use the app.
 
 * Ability to save specific recipes for future use.
 
-* Database has several recipes from different cooking websites so that the user has multiple options.
+* Database has several variations of recipes for each cuisine type so that the user has multiple options.
 
 ## Persistent data
 
 * List of recipes.
 
+* Ingredients for recipes.
+
 ## Device/external services
 
-[Recipe's API](https://spoonacular.com/food-api/docs)
-[Wireframe]()
+* [Recipe's API](https://spoonacular.com/food-api/docs)
+
+* [Wireframe](docs/wireframe.md)
+
+* [ERD](docs/erd.md)
 
 ## Stretch goals/possible enhancements
 
-* User will have multiple options of recipes that can help the user save time on deciding what to cook and being able to
-  better prepare the ingredients for later use.
+* User will be able to save a large amount of recipes on their phone that they can access for later times.
 
-* User will be able to track what they're spending their money on which in turn can possibly help save money.
+* User will be able to search for a recipe by the specific ingredient(s) of their choosing.
