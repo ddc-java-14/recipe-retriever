@@ -28,10 +28,8 @@
 
 ## Device/external services
 
-* <p> <a href="https://spoonacular.com/food-api/docs">
-  Recipe's API
-
-</a> </p>
+[Recipe's API](https://spoonacular.com/food-api/docs)
+[Wireframe]()
 
 ## Stretch goals/possible enhancements
 
