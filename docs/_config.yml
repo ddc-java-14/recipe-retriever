@@ -2,14 +2,14 @@ remote_theme: ddc-java/ddc-day
 repository_links:
   enabled: false
 page_navigator:
-  enabled: false
+  enabled: true
 titles_from_headings:
   enabled: false
 
 # Modify the contents below for the specific project. NOTE THE INDENTATION!
 
 title: "Recipe Retriever"
-description: "Find what you're craving!"
+description: "Find the recipe you want"
 author:
   name: "Nicholas Mitchell"
 
