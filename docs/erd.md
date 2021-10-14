@@ -1,6 +1,6 @@
 --- 
-title: ERD
-description: High-level view of user interaction and flow.
+title: Entity-relationship diagram
+description: App entities, attributes, relationships
 menu: ERD
 order: 10
 ---
