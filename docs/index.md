@@ -15,25 +15,25 @@ order: 0
 
   > As someone struggling to save money, eating habits are at the top of the list of things that drain our money. With this app, college students, young adults and even families have a way to use up the ingredients they readily have on hand and save money on additional ingredients needed to complete the recipe.
 
-* College students looking to meal prep and save time cooking.
+* Someone looking to try a new recipe.
 
-  > As a college student, you know that time is everything and saving time when you can is a big advantage. With this app you can look up fast and easy recipes for meal prepping your breakfast, lunch and dinner for the day to save time and focus on studying instead of cooking.
+  > As an amateur cook looking to try a new recipe at home, I want an app that lets me look up different cuisine types and browse through the different recipes of that type.
 
 ## Functionality
 
-* App creates different recipes for the user when they input different cuisine types.
+App will have a dropdown button to ask the user to: 
 
-* User-friendly operation, allowing anyone to use the app.
-
-* Ability to save specific recipes for future use.
-
-* Database has several variations of recipes for each cuisine type so that the user has multiple options.
+  * Select a specific cuisine type.
+  * User will then be able to scroll through different recipes of that cuisine type and chose a recipe they would like to pull the ingredients and instructions for that selected recipe.
+  * User will also receive the macronutrient information for that selected recipes such as the protein, carbs and fat.
 
 ## Persistent data
 
 * List of recipes.
 
 * Ingredients for recipes.
+
+* Macronutrient information of selected recipe.
 
 ## Device/external services
 
