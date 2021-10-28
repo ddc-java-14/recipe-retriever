@@ -25,7 +25,7 @@ App will have a dropdown button to ask the user to:
 
   * Select a specific cuisine type.
   * User will then be able to scroll through different recipes of that cuisine type and chose a recipe they would like to pull the ingredients and instructions for that selected recipe.
-  * User will also receive the macronutrient information for that selected recipes such as the protein, carbs and fat.
+  * User will also receive the macronutrient information for that selected recipe such as the protein, carbs and fat.
 
 ## Persistent data
 
