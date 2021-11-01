@@ -5,4 +5,4 @@ menu: ERD
 order: 10
 ---
 
-[![ERD_diagram](images/erd-recipe-retriever.svg)](pdf/erd-recipe-retriever.pdf)
+[![ERD_diagram](images/recipe-retriever-erd.svg)](pdf/recipe-retriever-erd.pdf)

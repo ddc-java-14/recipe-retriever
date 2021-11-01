@@ -37,9 +37,7 @@ App will have a dropdown button to ask the user to:
 
 ## Device/external services
 
-[comment]: <> (TODO add more information on device/ external services
-Fix wireframe to reflect shuffle button, favorite/unfavorite button
-Fix ERD, take out UK on measurments.)
+[comment]: <> (TODO add more information on device/ external services.)
 
 * [Recipe's API](https://spoonacular.com/food-api/docs)
 

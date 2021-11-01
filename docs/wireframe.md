@@ -5,4 +5,4 @@ menu: Wireframe
 order: 10
 ---
 
-[![Wireframe_diagram](images/wireframe-recipe-retriver.svg)](pdf/wireframe-recipe-retriver.pdf)
+[![Wireframe_diagram](images/wireframe-recipe-retreiver.svg)](pdf/wireframe-recipe-retreiver.pdf)
