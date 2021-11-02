@@ -3,13 +3,13 @@ apply plugin: 'androidx.navigation.safeargs'
 
 android {
 
-    compileSdkVersion = 30
+    compileSdkVersion = 31
 
     defaultConfig {
 
         applicationId "edu.cnm.deepdive.reciperetriever"
         minSdkVersion 26
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -56,7 +56,7 @@ dependencies {
     implementation "androidx.navigation:navigation-ui:$navigationVersion"
 
     // Lifecycle (LiveData and ViewModel) libraries
-    def lifecycleVersion = '2.3.1'
+    def lifecycleVersion = '2.4.0'
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycleVersion"
