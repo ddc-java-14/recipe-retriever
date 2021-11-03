@@ -3,8 +3,8 @@ package edu.cnm.deepdive.reciperetriever.model.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
 import com.google.gson.annotations.Expose;
 import java.util.Date;
 
@@ -13,7 +13,7 @@ import java.util.Date;
 )
 public class Recipe {
 
-  @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
   @Expose
   @ColumnInfo(name = "recipe_id")
   private long id;
@@ -38,8 +38,8 @@ public class Recipe {
 
   @NonNull
   @Expose
-  @ColumnInfo(name = "cuisine_type_id", index = true)
-  private String cuisineTypeId;
+  @ColumnInfo(name = "cuisine_type", index = true)
+  private CuisineType cuisineType;
 
   public long getId() {
     return id;
@@ -86,11 +86,66 @@ public class Recipe {
   }
 
   @NonNull
-  public String getCuisineTypeId() {
-    return cuisineTypeId;
+  public CuisineType getCuisineType() {
+    return cuisineType;
   }
 
-  public void setCuisineTypeId(@NonNull String cuisineTypeId) {
-    this.cuisineTypeId = cuisineTypeId;
+  public void setCuisineType(@NonNull CuisineType cuisineType) {
+    this.cuisineType = cuisineType;
   }
+
+  public enum CuisineType {
+
+    AFRICAN("African"),
+    AMERICAN("American"),
+    BRITISH("British"),
+    CAJUN("Cajun"),
+    CARIBBEAN("Caribbean"),
+    CHINESE("Chinese"),
+    EASTERN_EUROPEAN("Eastern European"),
+    EUROPEAN("European"),
+    FRENCH("French"),
+    GERMAN("German"),
+    GREEK("Greek"),
+    INDIAN("Indian"),
+    IRISH("Irish"),
+    ITALIAN("Italian"),
+    JAPANESE("Japanese"),
+    JEWISH("Jewish"),
+    KOREAN("Korean"),
+    LATIN_AMERICAN("Latin American"),
+    MEDITERRANEAN("Mediterranean"),
+    MEXICAN("Mexican"),
+    MIDDLE_EASTERN("Middle Eastern"),
+    NORDIC("Nordic"),
+    SOUTHERN("Southern"),
+    SPANISH("Spanish"),
+    THAI("Thai"),
+    VIETNAMESE("Vietnamese");
+
+    private final String name;
+
+    CuisineType(String name) {
+      this.name = name;
+    }
+
+
+    @TypeConverter
+    public static CuisineType of(Integer value) {
+      return (value != null) ? values()[value] : null;
+    }
+
+    @TypeConverter
+    public static Integer toInteger(CuisineType value) {
+      return (value != null) ? value.ordinal() : null;
+
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+      return name;
+    }
+  }
+
 }

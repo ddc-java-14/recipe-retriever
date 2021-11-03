@@ -7,6 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
+import edu.cnm.deepdive.reciperetriever.model.entity.Recipe.CuisineType;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -41,11 +42,14 @@ public interface RecipeDao {
   @Delete
   Single<Integer> delete(Collection<Recipe> recipes);
 
-  @Query("SELECT * FROM recipe WHERE cuisine_type_id ORDER BY cuisine_type_id DESC")
+  @Query("SELECT * FROM recipe ORDER BY title ASC")
   LiveData<List<Recipe>> selectAll();
 
   @Query("SELECT * FROM recipe WHERE recipe_id =:recipeId")
-  LiveData<List<Recipe>> selectAll(long recipeId);
+  LiveData<Recipe> select(long recipeId);
+
+  @Query("SELECT * FROM recipe WHERE cuisine_type= :cuisineType ORDER BY title ASC")
+  LiveData<List<Recipe>> selectByCuisine(CuisineType cuisineType);
 
 }
 

@@ -7,41 +7,43 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.reciperetriever.model.entity.Ingredient;
+import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
+import edu.cnm.deepdive.reciperetriever.model.entity.User;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
 
 @Dao
-public interface IngredientDao {
+public interface UserDao {
 
   @Insert
-  Single<Long> insert(Ingredient ingredient);
+  Single<Long> insert(User user);
 
   @Insert
-  Single<List<Long>> insert(Ingredient... ingredients);
+  Single<List<Long>> insert(User... users);
 
   @Insert
-  Single<List<Long>> insert(Collection<Ingredient> ingredients);
+  Single<List<Long>> insert(Collection<User> users);
 
   @Update
-  Single<Integer> update(Ingredient ingredient);
+  Single<Integer> update(User user);
 
   @Update
-  Single<Integer> update(Ingredient... ingredients);
+  Single<Integer> update(User... users);
 
   @Update
-  Single<Integer> update(Collection<Ingredient> ingredients);
+  Single<Integer> update(Collection<User> users);
 
   @Delete
-  Single<Integer> delete(Ingredient ingredient);
+  Single<Integer> delete(User user);
 
   @Delete
-  Single<Integer> delete(Ingredient... ingredients);
+  Single<Integer> delete(User... users);
 
   @Delete
-  Single<Integer> delete(Collection<Ingredient> ingredients);
+  Single<Integer> delete(Collection<User> users);
 
-  @Query("SELECT * FROM ingredient WHERE ingredient_id ORDER BY name DESC")
+  @Query("SELECT * FROM user WHERE  ORDER BY name DESC")
   LiveData<List<Ingredient>> selectAll();
 
   @Query("SELECT * FROM ingredient WHERE ingredient_id =:ingredientId")
