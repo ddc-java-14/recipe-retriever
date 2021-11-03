@@ -13,7 +13,7 @@ import java.util.Date;
 )
 public class Recipe {
 
-  @PrimaryKey(autoGenerate = true)
+  @PrimaryKey
   @Expose
   @ColumnInfo(name = "recipe_id")
   private long id;
@@ -35,6 +35,11 @@ public class Recipe {
   @NonNull
   @Expose
   private String steps;
+
+  @NonNull
+  @Expose
+  @ColumnInfo(name = "cuisine_type_id", index = true)
+  private String cuisineTypeId;
 
   public long getId() {
     return id;
@@ -78,5 +83,14 @@ public class Recipe {
 
   public void setSteps(@NonNull String steps) {
     this.steps = steps;
+  }
+
+  @NonNull
+  public String getCuisineTypeId() {
+    return cuisineTypeId;
+  }
+
+  public void setCuisineTypeId(@NonNull String cuisineTypeId) {
+    this.cuisineTypeId = cuisineTypeId;
   }
 }
