@@ -41,8 +41,7 @@ public abstract class RecipeRetrieverDatabase extends RoomDatabase {
   private static  class InstanceHolder {
 
     private static final RecipeRetrieverDatabase INSTANCE =
-        Room.databaseBuilder(context, RecipeRetrieverDatabase.class, "codebreaker-db")
-
+        Room.databaseBuilder(context, RecipeRetrieverDatabase.class, "recipeRetriever-db")
             .build();
   }
 

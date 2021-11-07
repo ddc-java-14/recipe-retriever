@@ -14,8 +14,7 @@ public class RecipeWithIngredients extends Recipe {
   )
   private List<Ingredient> ingredients;
 
-  @Override
-  public List<Ingredient> getIngredients(){
+  public List<Ingredient> getIngredients() {
     return ingredients;
   }
 
