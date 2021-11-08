@@ -31,6 +31,10 @@ public interface WebServiceProxy {
   @POST("https://api.spoonacular.com/recipes/{id}/information")
   List<Ingredient> findIngredients(@Body Ingredient ingredient, @Path("{recipeId}") long id );
 
+  static WebServiceProxy getInstance() {
+    return InstanceHolder.INSTANCE;
+  }
+
   class InstanceHolder {
 
     private static final WebServiceProxy INSTANCE;
@@ -46,7 +50,7 @@ public interface WebServiceProxy {
           .addInterceptor(interceptor)
           .build();
       Retrofit retrofit = new Retrofit.Builder()
-          .baseUrl(BuildConfig.BASE_URL)
+          .baseUrl("https://api.spoonacular.com/recipes/complexSearch")
           .addConverterFactory(GsonConverterFactory.create(gson))
           .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
           .client(client)

@@ -2,6 +2,8 @@ package edu.cnm.deepdive.reciperetriever;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
+import edu.cnm.deepdive.reciperetriever.service.RecipeRetrieverDatabase;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Initializes (in the {@link #onCreate()} method) application-level resources. This class
@@ -14,6 +16,13 @@ public class RecipeRetrieverApplication extends Application {
   public void onCreate() {
     super.onCreate();
     Stetho.initializeWithDefaults(this);
+    RecipeRetrieverDatabase.setContext(this);
+    RecipeRetrieverDatabase
+        .getInstance()
+        .getRecipeDao()
+        .delete()
+        .subscribeOn(Schedulers.io())
+        .subscribe();
   }
 
 }
