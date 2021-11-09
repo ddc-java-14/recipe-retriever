@@ -18,8 +18,8 @@
       android:label="@string/app_name"
       android:name=".controller.MainActivity"
       android:theme="@style/Theme.RecipeRetriever.NoActionBar">
-      <intent-filter>
 
+      <intent-filter>
         <!-- Launches app -->
         <action android:name="android.intent.action.MAIN"/>
 
