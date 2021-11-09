@@ -12,13 +12,8 @@
     tools:layout="@layout/fragment_recipe">
 
     <action
-      android:id="@+id/open_note"
-      app:destination="@id/nav_edit_note">
-
-      <argument
-        android:name="note_id"
-        app:argType="long"
-        android:defaultValue="0L"/>
+      android:id="@+id/open_recipe"
+      app:destination="@id/">
 
     </action>
 
@@ -28,11 +23,6 @@
     android:id="@+id/nav_favorite_recipe"
     android:name="edu.cnm.deepdive.reciperetriever.controller.FavoriteRecipeFragment"
     tools:layout="@layout/fragment_favorite_recipe">
-
-    <argument
-      android:name="note_id"
-      app:argType="long"
-      android:defaultValue="0L"/>
 
   </dialog>
 
