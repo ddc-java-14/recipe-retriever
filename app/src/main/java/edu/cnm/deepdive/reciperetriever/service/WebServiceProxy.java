@@ -8,6 +8,7 @@ import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe.CuisineType;
 import io.reactivex.Single;
 import java.util.List;
+import kotlin.ParameterName;
 import okhttp3.OkHttpClient;
 import okhttp3.OkHttpClient.Builder;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -19,16 +20,17 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface WebServiceProxy {
 
-  @POST("https://api.spoonacular.com/recipes/cuisine")
+  @POST("cuisine")
   Single<CuisineType> searchCuisine(@Body CuisineType cuisineType);
 
-  @GET("https://api.spoonacular.com/recipes/complexSearch")
-  Single<Recipe> findRecipe(@Body Recipe recipe);
+  @GET("complexSearch")
+  Single<List<Recipe>> findRecipe(@Query("apiKey") String apiKey, @Query("number") Integer number);
 
-  @POST("https://api.spoonacular.com/recipes/{id}/information")
+  @POST("{id}/information")
   List<Ingredient> findIngredients(@Body Ingredient ingredient, @Path("{recipeId}") long id );
 
   static WebServiceProxy getInstance() {
@@ -50,7 +52,7 @@ public interface WebServiceProxy {
           .addInterceptor(interceptor)
           .build();
       Retrofit retrofit = new Retrofit.Builder()
-          .baseUrl("https://api.spoonacular.com/recipes/complexSearch")
+          .baseUrl("https://api.spoonacular.com/recipes/")
           .addConverterFactory(GsonConverterFactory.create(gson))
           .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
           .client(client)

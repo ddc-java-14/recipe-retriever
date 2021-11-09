@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     // Passing each menu ID as a set of Ids because each
     // menu should be considered as top level destinations.
     appBarConfiguration = new AppBarConfiguration.Builder(
-        R.id.new_recipe, R.id.favorite_recipes, R.id.nav_slideshow)
+        R.id.nav_favorites, R.id.nav_cuisines)
         .setDrawerLayout(drawer)
         .build();
     NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

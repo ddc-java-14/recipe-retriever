@@ -10,8 +10,9 @@
     android:name=".RecipeRetrieverApplication"
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
-    android:theme="@style/Theme.Codebreaker"
+    android:theme="@style/Theme.RecipeRetriever"
     tools:ignore="AllowBackup">
+
     <activity
       android:exported="true"
       android:label="@string/app_name"

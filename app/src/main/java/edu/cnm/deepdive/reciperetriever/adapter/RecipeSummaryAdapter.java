@@ -2,24 +2,23 @@ package edu.cnm.deepdive.reciperetriever.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import edu.cnm.deepdive.reciperetriever.adapter.IngredientItemAdapter.Holder;
-import edu.cnm.deepdive.reciperetriever.model.view.RecipeSummary;
+import edu.cnm.deepdive.reciperetriever.databinding.ItemRecipeSummaryBinding;
+import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.List;
 
-public class RecipeSummaryAdapter extends RecyclerView.Adapter<Holder> {
+public class RecipeSummaryAdapter extends RecyclerView.Adapter<RecipeSummaryAdapter.Holder> {
 
   private final LayoutInflater inflater;
   private final DateFormat dateFormat;
   private final NumberFormat numberFormat;
-  private final List<RecipeSummary> recipes;
+  private final List<Recipe> recipes;
 
-  public RecipeSummaryAdapter(Context context, List<RecipeSummary> recipes) {
+  public RecipeSummaryAdapter(Context context, List<Recipe> recipes) {
     inflater = LayoutInflater.from(context);
     dateFormat = android.text.format.DateFormat.getDateFormat(context);
     numberFormat = NumberFormat.getIntegerInstance();
@@ -34,7 +33,7 @@ public class RecipeSummaryAdapter extends RecyclerView.Adapter<Holder> {
 
   @Override
   public void onBindViewHolder(@NonNull Holder holder, int position) {
-    holder.bind(position)
+    holder.binding.getRoot();
   }
 
   @Override
@@ -51,7 +50,6 @@ public class RecipeSummaryAdapter extends RecyclerView.Adapter<Holder> {
       this.binding = binding;
     }
 
-    private void bind(int position)
   }
 
 

@@ -10,13 +10,11 @@ import edu.cnm.deepdive.reciperetriever.model.dao.IngredientDao;
 import edu.cnm.deepdive.reciperetriever.model.dao.RecipeDao;
 import edu.cnm.deepdive.reciperetriever.model.entity.Ingredient;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
-import edu.cnm.deepdive.reciperetriever.model.view.RecipeSummary;
 import edu.cnm.deepdive.reciperetriever.service.RecipeRetrieverDatabase.Converters;
 import java.util.Date;
 
 @Database(
     entities = {Recipe.class, Ingredient.class},
-    views = {RecipeSummary.class},
     version = 1,
     exportSchema = true
 )

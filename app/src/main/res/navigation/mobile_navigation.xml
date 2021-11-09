@@ -3,23 +3,18 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/mobile_navigation"
-  app:startDestination="@+id/navigation_home">
+  app:startDestination="@+id/nav_favorites">
 
   <fragment
-    android:id="@+id/navigation_home"
-    android:label="@string/title_home"
-    android:name="edu.cnm.deepdive.reciperetriever.ui.home.HomeFragment"
+    android:id="@+id/nav_favorites"
+    android:label="@string/title_favorites"
+    android:name="edu.cnm.deepdive.reciperetriever.controller.FavoriteRecipeFragment"
     tools:layout="@layout/fragment_recipe"/>
 
-  <fragment
-    android:id="@+id/navigation_dashboard"
-    android:label="@string/title_dashboard"
-    android:name="edu.cnm.deepdive.reciperetriever.ui.dashboard.DashboardFragment"
-    tools:layout="@layout/fragment_favorite_recipe"/>
 
   <fragment
-    android:id="@+id/cuisines"
-    android:label="@string/cuisine_types"
-    android:name="edu.cnm.deepdive.reciperetriever.ui.notifications.NotificationsFragment"
+    android:id="@+id/nav_cuisines"
+    android:label="@string/title_cuisine_types"
+    android:name="edu.cnm.deepdive.reciperetriever.controller.ui.slideshow.SlideshowFragment"
     tools:layout="@layout/fragment_slideshow"/>
 </navigation>

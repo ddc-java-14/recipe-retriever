@@ -10,13 +10,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import edu.cnm.deepdive.reciperetriever.adapter.RecipeSummaryAdapter;
 import edu.cnm.deepdive.reciperetriever.databinding.FragmentFavoriteRecipeBinding;
-import edu.cnm.deepdive.reciperetriever.databinding.FragmentRecipeBinding;
-import edu.cnm.deepdive.reciperetriever.model.view.RecipeSummary;
 import edu.cnm.deepdive.reciperetriever.viewmodel.FavoriteRecipesViewModel;
+import edu.cnm.deepdive.reciperetriever.viewmodel.RecipeViewModel;
 
 public class FavoriteRecipeFragment extends Fragment {
 
-  private FavoriteRecipesViewModel viewModel;
+  private RecipeViewModel viewModel;
   private FragmentFavoriteRecipeBinding binding;
 
   @Override
@@ -29,12 +28,12 @@ public class FavoriteRecipeFragment extends Fragment {
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    viewModel = new ViewModelProvider(this).get(FavoriteRecipesViewModel.class);
+    viewModel = new ViewModelProvider(this).get(RecipeViewModel.class);
     viewModel
         .getRecipes()
         .observe(getViewLifecycleOwner(), (recipes) -> {
           RecipeSummaryAdapter adapter = new RecipeSummaryAdapter(getContext(), recipes);
-          binding.recipes.setAdapter(adapter);
+          binding.favoriteRecipeView.setAdapter(adapter);
         });
   }
 
