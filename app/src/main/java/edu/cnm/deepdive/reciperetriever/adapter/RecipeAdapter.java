@@ -11,14 +11,14 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.List;
 
-public class RecipeSummaryAdapter extends RecyclerView.Adapter<RecipeSummaryAdapter.Holder> {
+public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
 
   private final LayoutInflater inflater;
   private final DateFormat dateFormat;
   private final NumberFormat numberFormat;
   private final List<Recipe> recipes;
 
-  public RecipeSummaryAdapter(Context context, List<Recipe> recipes) {
+  public RecipeAdapter(Context context, List<Recipe> recipes) {
     inflater = LayoutInflater.from(context);
     dateFormat = android.text.format.DateFormat.getDateFormat(context);
     numberFormat = NumberFormat.getIntegerInstance();

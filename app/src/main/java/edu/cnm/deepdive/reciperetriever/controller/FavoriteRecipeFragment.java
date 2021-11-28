@@ -8,9 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import edu.cnm.deepdive.reciperetriever.adapter.RecipeSummaryAdapter;
+import edu.cnm.deepdive.reciperetriever.adapter.RecipeAdapter;
 import edu.cnm.deepdive.reciperetriever.databinding.FragmentFavoriteRecipeBinding;
-import edu.cnm.deepdive.reciperetriever.viewmodel.FavoriteRecipesViewModel;
 import edu.cnm.deepdive.reciperetriever.viewmodel.RecipeViewModel;
 
 public class FavoriteRecipeFragment extends Fragment {
@@ -32,7 +31,7 @@ public class FavoriteRecipeFragment extends Fragment {
     viewModel
         .getRecipes()
         .observe(getViewLifecycleOwner(), (recipes) -> {
-          RecipeSummaryAdapter adapter = new RecipeSummaryAdapter(getContext(), recipes);
+          RecipeAdapter adapter = new RecipeAdapter(getContext(), recipes);
           binding.favoriteRecipeView.setAdapter(adapter);
         });
   }

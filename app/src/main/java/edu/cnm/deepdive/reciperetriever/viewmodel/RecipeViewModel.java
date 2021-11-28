@@ -1,11 +1,14 @@
 package edu.cnm.deepdive.reciperetriever.viewmodel;
 
 import android.app.Application;
+import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.Lifecycle.Event;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.Transformations;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
 import edu.cnm.deepdive.reciperetriever.model.pojo.RecipeWithIngredients;
@@ -52,6 +55,24 @@ public class RecipeViewModel extends AndroidViewModel implements LifecycleObserv
     Recipe recipe = new Recipe();
   }
 
+  public void save(Recipe recipe) {
+    pending.add(
+        repository
+            .save(recipe)
+            .subscribe(
+                (savedRecipe) -> {},
+                this::postThrowable
+            )
+    );
+  }
 
+  private void postThrowable(Throwable throwable) {
+    Log.e(getClass().getSimpleName(), throwable.getMessage(), throwable);
+    this.throwable.postValue(throwable);
+  }
 
+  @OnLifecycleEvent(Event.ON_STOP)
+  private void clearPending() {
+    pending.clear();
+  }
 }

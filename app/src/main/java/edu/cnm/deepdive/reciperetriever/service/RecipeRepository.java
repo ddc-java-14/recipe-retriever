@@ -46,9 +46,11 @@ public class RecipeRepository {
     return task
         .subscribeOn(Schedulers.io());
   }
+
   public LiveData<RecipeWithIngredients> getRecipe(long recipeId) {
     return recipeDao.select(recipeId);
   }
+
   public LiveData<List<Recipe>> getAll() {
     return recipeDao.selectAll();
   }
