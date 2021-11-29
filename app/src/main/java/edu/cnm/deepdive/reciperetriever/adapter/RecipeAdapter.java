@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import edu.cnm.deepdive.reciperetriever.databinding.ItemRecipeSummaryBinding;
+import edu.cnm.deepdive.reciperetriever.databinding.ItemRecipeBinding;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
 import java.text.DateFormat;
 import java.text.NumberFormat;
@@ -28,7 +28,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
   @NonNull
   @Override
   public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    return new Holder(ItemRecipeSummaryBinding.inflate(inflater, parent, false));
+    return new Holder(ItemRecipeBinding.inflate(inflater, parent, false));
   }
 
   @Override
@@ -43,9 +43,9 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
 
   class Holder extends RecyclerView.ViewHolder{
 
-    private final ItemRecipeSummaryBinding binding;
+    private final ItemRecipeBinding binding;
 
-    private Holder(@NonNull ItemRecipeSummaryBinding binding) {
+    private Holder(@NonNull ItemRecipeBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }

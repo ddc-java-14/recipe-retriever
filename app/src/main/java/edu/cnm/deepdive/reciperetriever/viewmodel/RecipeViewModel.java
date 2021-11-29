@@ -55,7 +55,7 @@ public class RecipeViewModel extends AndroidViewModel implements LifecycleObserv
     Recipe recipe = new Recipe();
   }
 
-  public void save(Recipe recipe) {
+  public void save(RecipeWithIngredients recipe) {
     pending.add(
         repository
             .save(recipe)

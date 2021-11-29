@@ -3,21 +3,26 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/nav_graph"
-  app:startDestination="@id/nav_recipe">
+  app:startDestination="@id/nav_favorites">
 
   <fragment
-    android:id="@+id/nav_recipe"
-    android:label="@string/app_name"
+    android:id="@+id/nav_favorites"
+    android:label="@string/favorite_recipes_title"
     android:name="edu.cnm.deepdive.reciperetriever.controller.FavoriteRecipeFragment"
     tools:layout="@layout/fragment_recipe">
 
     <action
       android:id="@+id/open_recipe"
-      app:destination="@id/">
+      app:destination="@id/nav_favorite_recipe">
 
     </action>
 
   </fragment>
+
+  <fragment
+    android:id="@+id/nav_settings"
+    android:label="@string/settings_title"
+    android:name="edu.cnm.deepdive.reciperetriever.controller.SettingsFragment"/>
 
   <dialog
     android:id="@+id/nav_favorite_recipe"

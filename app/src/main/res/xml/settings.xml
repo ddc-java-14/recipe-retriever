@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <SeekBarPreference
+    android:key="@string/recipe_pref_key"
+    app:min="@integer/recipe_pref_min"
+    android:max="@integer/recipe_pref_max"
+    android:defaultValue="@integer/recipe_pref_default"
+    app:seekBarIncrement="@integer/recipe_pref_increment"
+    app:showSeekBarValue="true"
+    android:title="@string/recipe_pref_title"/>
+
+<!--  <CheckBoxPreference-->
+
+
+
+
+</PreferenceScreen>

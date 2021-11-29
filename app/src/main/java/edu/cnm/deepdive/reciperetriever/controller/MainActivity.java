@@ -2,10 +2,12 @@ package edu.cnm.deepdive.reciperetriever.controller;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import com.google.android.material.navigation.NavigationView;
 import edu.cnm.deepdive.reciperetriever.R;
 import edu.cnm.deepdive.reciperetriever.databinding.ActivityMainBinding;
 
@@ -22,11 +24,16 @@ public class MainActivity extends AppCompatActivity {
     setContentView(binding.getRoot());
 
     setSupportActionBar(binding.toolbar);
+    DrawerLayout drawer = binding.drawerLayout;
+    NavigationView navView = binding.navView;
 
     NavController navController = Navigation.findNavController(this,
         R.id.nav_host_fragment_content_main);
-    appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+    appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_favorites)
+        .setDrawerLayout(drawer)
+        .build();
     NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+    NavigationUI.setupWithNavController(navView, navController);
   }
 
   @Override

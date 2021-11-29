@@ -26,5 +26,10 @@
   <string name="title_favorites">Favorite recipes</string>
   <string name="title_dashboard">favorite_recipe_view</string>
   <string name="title_cuisine_types">Cuisine types</string>
+  <string name="recipe_pref_key">recipe_pref_key</string>
+  <string name="recipe_pref_title">Number of recipes to show</string>
+  <string name="recipe_search_title">Recipe search</string>
+  <string name="favorite_recipes_title">Favorite recipes</string>
+  <string name="settings_title">Settings</string>
 
 </resources>
