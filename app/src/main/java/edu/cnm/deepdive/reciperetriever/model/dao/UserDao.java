@@ -5,10 +5,12 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 import edu.cnm.deepdive.reciperetriever.model.entity.Ingredient;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
 import edu.cnm.deepdive.reciperetriever.model.entity.User;
+import edu.cnm.deepdive.reciperetriever.model.pojo.UserWithRecipes;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
@@ -43,10 +45,8 @@ public interface UserDao {
   @Delete
   Single<Integer> delete(Collection<User> users);
 
-  @Query("SELECT * FROM user WHERE  ORDER BY name DESC")
-  LiveData<List<Ingredient>> selectAll();
-
-  @Query("SELECT * FROM ingredient WHERE ingredient_id =:ingredientId")
-  LiveData<List<Ingredient>> selectAll(long ingredientId);
+  @Transaction
+  @Query("SELECT * FROM user WHERE user_id = :userId")
+  LiveData<UserWithRecipes> select(long userId);
 
 }

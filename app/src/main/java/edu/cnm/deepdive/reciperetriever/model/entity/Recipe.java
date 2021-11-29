@@ -32,6 +32,9 @@ public class Recipe {
   @ColumnInfo(index = true)
   private Date created;
 
+  @ColumnInfo(name = "user_id", index = true)
+  private long userId;
+
   @NonNull
   @Expose
   private String steps;
@@ -74,6 +77,14 @@ public class Recipe {
 
   public void setCreated(@NonNull Date created) {
     this.created = created;
+  }
+
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
   }
 
   @NonNull

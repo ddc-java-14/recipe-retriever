@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
     binding = ActivityMainBinding.inflate(getLayoutInflater());
     setContentView(binding.getRoot());
 
-    setSupportActionBar(binding.toolbar);
+    setSupportActionBar(binding.appBarMain.toolbar);
     DrawerLayout drawer = binding.drawerLayout;
     NavigationView navView = binding.navView;
 
     NavController navController = Navigation.findNavController(this,
         R.id.nav_host_fragment_content_main);
-    appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_favorites)
+    appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_favorites, R.id.nav_search)
         .setDrawerLayout(drawer)
         .build();
     NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

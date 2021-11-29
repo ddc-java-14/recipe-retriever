@@ -36,5 +36,6 @@
   <string name="new_recipe_search">New recipe</string>
   <string name="menu_settings">Menu settings</string>
   <string name="add_favorite">Favorite recipe</string>
+  <string name="search_term_hint">Search term</string>
 
 </resources>

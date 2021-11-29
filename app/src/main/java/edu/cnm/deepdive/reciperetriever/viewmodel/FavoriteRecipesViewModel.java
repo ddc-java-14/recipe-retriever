@@ -13,7 +13,7 @@ public class FavoriteRecipesViewModel extends AndroidViewModel {
 
   public FavoriteRecipesViewModel(@NonNull Application application) {
     super(application);
-    repository = new RecipeRepository();
+    repository = new RecipeRepository(application);
   }
 
 //

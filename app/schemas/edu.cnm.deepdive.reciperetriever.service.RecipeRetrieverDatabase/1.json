@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "149b4b098b65629b8b30e0308e937c20",
+    "identityHash": "5c6833a91f412a0a5df27452b0e40774",
     "entities": [
       {
         "tableName": "recipe",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recipe_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `created` INTEGER NOT NULL, `steps` TEXT NOT NULL, `cuisine_type` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recipe_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `created` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, `steps` TEXT NOT NULL, `cuisine_type` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -29,6 +29,12 @@
           {
             "fieldPath": "created",
             "columnName": "created",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "user_id",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -67,6 +73,14 @@
               "created"
             ],
             "createSql": "CREATE INDEX IF NOT EXISTS `index_recipe_created` ON `${TABLE_NAME}` (`created`)"
+          },
+          {
+            "name": "index_recipe_user_id",
+            "unique": false,
+            "columnNames": [
+              "user_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recipe_user_id` ON `${TABLE_NAME}` (`user_id`)"
           },
           {
             "name": "index_recipe_cuisine_type",
@@ -145,12 +159,83 @@
             ]
           }
         ]
+      },
+      {
+        "tableName": "user",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `created` INTEGER NOT NULL, `user_name` TEXT NOT NULL, `email` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "user_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "created",
+            "columnName": "created",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "user_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "user_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_user_email",
+            "unique": true,
+            "columnNames": [
+              "email"
+            ],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_user_email` ON `${TABLE_NAME}` (`email`)"
+          },
+          {
+            "name": "index_user_user_id",
+            "unique": false,
+            "columnNames": [
+              "user_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_user_user_id` ON `${TABLE_NAME}` (`user_id`)"
+          },
+          {
+            "name": "index_user_created",
+            "unique": false,
+            "columnNames": [
+              "created"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_user_created` ON `${TABLE_NAME}` (`created`)"
+          },
+          {
+            "name": "index_user_user_name",
+            "unique": false,
+            "columnNames": [
+              "user_name"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_user_user_name` ON `${TABLE_NAME}` (`user_name`)"
+          }
+        ],
+        "foreignKeys": []
       }
     ],
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '149b4b098b65629b8b30e0308e937c20')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5c6833a91f412a0a5df27452b0e40774')"
     ]
   }
 }

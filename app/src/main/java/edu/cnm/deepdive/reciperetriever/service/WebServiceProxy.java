@@ -28,7 +28,7 @@ public interface WebServiceProxy {
   Single<CuisineType> searchCuisine(@Body CuisineType cuisineType);
 
   @GET("complexSearch")
-  Single<List<Recipe>> findRecipe(@Query("apiKey") String apiKey, @Query("number") Integer number);
+  Single<List<Recipe>> findRecipe(@Query("apiKey") String apiKey, @Query("number") Integer number, @Query("query") String searchTerm);
 
   @POST("{id}/information")
   List<Ingredient> findIngredients(@Body Ingredient ingredient, @Path("{recipeId}") long id );

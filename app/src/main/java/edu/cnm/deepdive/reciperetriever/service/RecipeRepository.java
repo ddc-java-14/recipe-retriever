@@ -1,7 +1,11 @@
 package edu.cnm.deepdive.reciperetriever.service;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
+import androidx.preference.PreferenceManager;
+import edu.cnm.deepdive.reciperetriever.R;
 import edu.cnm.deepdive.reciperetriever.model.dao.IngredientDao;
 import edu.cnm.deepdive.reciperetriever.model.dao.RecipeDao;
 import edu.cnm.deepdive.reciperetriever.model.entity.Ingredient;
@@ -21,12 +25,16 @@ public class RecipeRepository {
   private final WebServiceProxy proxy;
   private final RecipeDao recipeDao;
   private final IngredientDao ingredientDao;
+  private final SharedPreferences preferences;
+  private final String recipeCountPrefKey;
 
-  public RecipeRepository() {
+  public RecipeRepository(Context context) {
     proxy = WebServiceProxy.getInstance();
     RecipeRetrieverDatabase database = RecipeRetrieverDatabase.getInstance();
     recipeDao = database.getRecipeDao();
     ingredientDao = database.getIngredientDao();
+    preferences = PreferenceManager.getDefaultSharedPreferences(context);
+    recipeCountPrefKey = context.getString(R.string.recipe_pref_key);
   }
 
   public Single<RecipeWithIngredients> save(RecipeWithIngredients recipe) {
@@ -54,6 +62,7 @@ public class RecipeRepository {
   public LiveData<List<Recipe>> getAll() {
     return recipeDao.selectAll();
   }
+
   public Completable delete(Recipe recipe) {
     return (recipe.getId() == 0)
         ? Completable.complete()
@@ -63,10 +72,13 @@ public class RecipeRepository {
             .subscribeOn(Schedulers.io());
   }
 
-
-
-
-//  TODO add search method for database.
+  public Single<List<Recipe>> search(String searchTerm) {
+    int recipeCount = preferences.getInt(recipeCountPrefKey, R.integer.recipe_pref_default);
+    return proxy
+        .findRecipe("", recipeCount, searchTerm)
+        .subscribeOn(Schedulers.io());
+  }
+  //  TODO add search method for database.
 //  TODO add search method to search through api.
   @NonNull
   private Single<RecipeWithIngredients> insertNewIngredients(

@@ -21,17 +21,18 @@ public class RecipeViewModel extends AndroidViewModel implements LifecycleObserv
   private final RecipeRepository repository;
   private final LiveData<RecipeWithIngredients> recipe;
   private final MutableLiveData<Long> recipeId;
+  private final MutableLiveData<List<? extends Recipe>> searchResults;
   private final MutableLiveData<Throwable> throwable;
   private final CompositeDisposable pending;
 
   public RecipeViewModel(@NonNull Application application) {
     super(application);
-    repository = new RecipeRepository();
+    repository = new RecipeRepository(application);
     recipeId = new MutableLiveData<>();
     recipe = Transformations.switchMap(recipeId, repository::getRecipe);
+    searchResults = new MutableLiveData<>();
     throwable = new MutableLiveData<>();
     pending = new CompositeDisposable();
-    startSearch();
   }
 
   public LiveData<RecipeWithIngredients> getRecipe() {
@@ -46,13 +47,17 @@ public class RecipeViewModel extends AndroidViewModel implements LifecycleObserv
     recipeId.setValue(id);
   }
 
+  public LiveData<List<? extends Recipe>> getSearchResults() {
+    return searchResults;
+  }
+
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
 
-  public void startSearch() {
+  public void startSearch(String searchTerm) {
     throwable.postValue(null);
-    Recipe recipe = new Recipe();
+    // TODO invoke and subscribe to results of repository.recipeRepository.search.findRecipe
   }
 
   public void save(RecipeWithIngredients recipe) {

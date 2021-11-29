@@ -8,13 +8,15 @@ import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
 import edu.cnm.deepdive.reciperetriever.model.dao.IngredientDao;
 import edu.cnm.deepdive.reciperetriever.model.dao.RecipeDao;
+import edu.cnm.deepdive.reciperetriever.model.dao.UserDao;
 import edu.cnm.deepdive.reciperetriever.model.entity.Ingredient;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
+import edu.cnm.deepdive.reciperetriever.model.entity.User;
 import edu.cnm.deepdive.reciperetriever.service.RecipeRetrieverDatabase.Converters;
 import java.util.Date;
 
 @Database(
-    entities = {Recipe.class, Ingredient.class},
+    entities = {Recipe.class, Ingredient.class, User.class},
     version = 1,
     exportSchema = true
 )
@@ -35,6 +37,8 @@ public abstract class RecipeRetrieverDatabase extends RoomDatabase {
   public abstract RecipeDao getRecipeDao();
 
   public abstract IngredientDao getIngredientDao();
+
+  public abstract UserDao getUserDao();
 
   private static  class InstanceHolder {
 

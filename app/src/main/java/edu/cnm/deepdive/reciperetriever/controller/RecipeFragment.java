@@ -24,14 +24,13 @@ public class RecipeFragment extends Fragment {
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setHasOptionsMenu(true);
+//    setHasOptionsMenu(true);
   }
 
   public View onCreateView(
       @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentRecipeBinding.inflate(inflater, container, false);
-//    binding.addFavorite.setOnClickListener((v) -> getRecipe());
-//    TDOD set on click listener
+    binding.search.setOnClickListener((v) -> { /* TODO submitSearch to viewModel */ });
     return binding.getRoot();
   }
 
