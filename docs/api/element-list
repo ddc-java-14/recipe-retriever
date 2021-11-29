@@ -1,0 +1,8 @@
+edu.cnm.deepdive.reciperetriever
+edu.cnm.deepdive.reciperetriever.adapter
+edu.cnm.deepdive.reciperetriever.controller
+edu.cnm.deepdive.reciperetriever.model.dao
+edu.cnm.deepdive.reciperetriever.model.entity
+edu.cnm.deepdive.reciperetriever.model.pojo
+edu.cnm.deepdive.reciperetriever.service
+edu.cnm.deepdive.reciperetriever.viewmodel
