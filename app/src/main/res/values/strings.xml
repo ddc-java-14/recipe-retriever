@@ -11,7 +11,7 @@
   <string name="favorite_recipes">Favorite Recipes</string>
   <string name="menu_slideshow">Slideshow</string>
   <string name="save">Save</string>
-  <string name="new_recipe">New recipe</string>
+  <string name="new_recipe_search">New recipe</string>
 
   <string name="play_error_message">Unable to process request. (%s)</string>
   <string name="error_dismiss">Dismiss</string>
@@ -31,5 +31,10 @@
   <string name="recipe_search_title">Recipe search</string>
   <string name="favorite_recipes_title">Favorite recipes</string>
   <string name="settings_title">Settings</string>
+  <string name="sign_out">Sign out</string>
+  <string name="login_failure_message">Unable to sign in with the provided credentials.</string>
+  <string name="new_recipe_search">New recipe</string>
+  <string name="menu_settings">Menu settings</string>
+  <string name="add_favorite">Favorite recipe</string>
 
 </resources>
