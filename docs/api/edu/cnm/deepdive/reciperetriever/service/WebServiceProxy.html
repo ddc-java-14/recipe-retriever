@@ -167,15 +167,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Ingredient.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Ingredient</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Ingredient.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Ingredient</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findIngredients(edu.cnm.deepdive.reciperetriever.model.entity.Ingredient,long)">findIngredients</a></span>&#8203;(<a href="../model/entity/Ingredient.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Ingredient</a>&nbsp;ingredient,
                long&nbsp;id)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>io.reactivex.Single&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findRecipe(java.lang.String,java.lang.Integer)">findRecipe</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
-          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;number)</code></th>
+<td class="colFirst"><code>io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findRecipe(java.lang.String,java.lang.Integer,java.lang.String)">findRecipe</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
+          <a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;number,
+          <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;searchTerm)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
@@ -216,17 +217,19 @@ io.reactivex.Single&lt;<a href="../model/entity/Recipe.CuisineType.html" title="
                                                       <a href="../model/entity/Recipe.CuisineType.html" title="enum in edu.cnm.deepdive.reciperetriever.model.entity">Recipe.CuisineType</a>&nbsp;cuisineType)</pre>
 </li>
 </ul>
-<a id="findRecipe(java.lang.String,java.lang.Integer)">
+<a id="findRecipe(java.lang.String,java.lang.Integer,java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>findRecipe</h4>
 <pre class="methodSignature">@GET("complexSearch")
-io.reactivex.Single&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;&nbsp;findRecipe&#8203;(@Query("apiKey")
-                                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
+io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;&nbsp;findRecipe&#8203;(@Query("apiKey")
+                                             <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;apiKey,
                                              @Query("number")
-                                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;number)</pre>
+                                             <a href="https://developer.android.com/reference/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink">Integer</a>&nbsp;number,
+                                             @Query("query")
+                                             <a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;searchTerm)</pre>
 </li>
 </ul>
 <a id="findIngredients(edu.cnm.deepdive.reciperetriever.model.entity.Ingredient,long)">
@@ -236,7 +239,7 @@ io.reactivex.Single&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/u
 <li class="blockList">
 <h4>findIngredients</h4>
 <pre class="methodSignature">@POST("{id}/information")
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Ingredient.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Ingredient</a>&gt;&nbsp;findIngredients&#8203;(@Body
+<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Ingredient.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Ingredient</a>&gt;&nbsp;findIngredients&#8203;(@Body
                                  <a href="../model/entity/Ingredient.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Ingredient</a>&nbsp;ingredient,
                                  @Path("{recipeId}")
                                  long&nbsp;id)</pre>

@@ -11,6 +11,9 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.util.List;
 
+/**
+ *
+ */
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
 
   private final LayoutInflater inflater;
@@ -18,6 +21,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
   private final NumberFormat numberFormat;
   private final List<Recipe> recipes;
 
+  /**
+   *
+   * @param context
+   * @param recipes
+   */
   public RecipeAdapter(Context context, List<Recipe> recipes) {
     inflater = LayoutInflater.from(context);
     dateFormat = android.text.format.DateFormat.getDateFormat(context);

@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":9,"i2":6,"i3":9};
+var data = {"i0":6,"i1":9,"i2":6,"i3":6,"i4":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -119,10 +119,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
+<li><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>androidx.room.RoomDatabase</li>
+<li><a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true" title="class or interface in androidx.room" class="externalLink">androidx.room.RoomDatabase</a></li>
 <li>
 <ul class="inheritance">
 <li>edu.cnm.deepdive.reciperetriever.service.RecipeRetrieverDatabase</li>
@@ -136,7 +136,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <hr>
 <pre>public abstract class <span class="typeNameLabel">RecipeRetrieverDatabase</span>
-extends androidx.room.RoomDatabase</pre>
+extends <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase</a></pre>
 </li>
 </ul>
 </div>
@@ -167,8 +167,8 @@ extends androidx.room.RoomDatabase</pre>
 <li class="blockList"><a id="nested.classes.inherited.from.class.androidx.room.RoomDatabase">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from class&nbsp;androidx.room.RoomDatabase</h3>
-<code>androidx.room.RoomDatabase.Builder&lt;T extends androidx.room.RoomDatabase&gt;, androidx.room.RoomDatabase.Callback, androidx.room.RoomDatabase.JournalMode, androidx.room.RoomDatabase.MigrationContainer, androidx.room.RoomDatabase.PrepackagedDatabaseCallback, androidx.room.RoomDatabase.QueryCallback</code></li>
+<h3>Nested classes/interfaces inherited from class&nbsp;androidx.room.<a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase</a></h3>
+<code><a href="https://developer.android.com/reference/androidx/room/RoomDatabase.Builder.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase.Builder</a>&lt;<a href="https://developer.android.com/reference/androidx/room/RoomDatabase.Builder.html?is-external=true" title="class or interface in androidx.room" class="externalLink">T</a> extends <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase</a>&gt;, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.Callback.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase.Callback</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.JournalMode.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase.JournalMode</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.MigrationContainer.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase.MigrationContainer</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.PrepackagedDatabaseCallback.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase.PrepackagedDatabaseCallback</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.QueryCallback.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase.QueryCallback</a></code></li>
 </ul>
 </li>
 </ul>
@@ -184,8 +184,8 @@ extends androidx.room.RoomDatabase</pre>
 <li class="blockList"><a id="fields.inherited.from.class.androidx.room.RoomDatabase">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;androidx.room.RoomDatabase</h3>
-<code>MAX_BIND_PARAMETER_CNT, mCallbacks, mDatabase</code></li>
+<h3>Fields inherited from class&nbsp;androidx.room.<a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase</a></h3>
+<code><a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#MAX_BIND_PARAMETER_CNT" title="class or interface in androidx.room" class="externalLink">MAX_BIND_PARAMETER_CNT</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#mCallbacks" title="class or interface in androidx.room" class="externalLink">mCallbacks</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#mDatabase" title="class or interface in androidx.room" class="externalLink">mDatabase</a></code></li>
 </ul>
 </li>
 </ul>
@@ -241,8 +241,13 @@ extends androidx.room.RoomDatabase</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>abstract <a href="../model/dao/UserDao.html" title="interface in edu.cnm.deepdive.reciperetriever.model.dao">UserDao</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserDao()">getUserDao</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setContext(android.app.Application)">setContext</a></span>&#8203;(android.app.Application&nbsp;context)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setContext(android.app.Application)">setContext</a></span>&#8203;(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app" class="externalLink">Application</a>&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -250,15 +255,15 @@ extends androidx.room.RoomDatabase</pre>
 <li class="blockList"><a id="methods.inherited.from.class.androidx.room.RoomDatabase">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;androidx.room.RoomDatabase</h3>
-<code>assertNotMainThread, assertNotSuspendingTransaction, beginTransaction, clearAllTables, close, compileStatement, createInvalidationTracker, createOpenHelper, endTransaction, getInvalidationTracker, getOpenHelper, getQueryExecutor, getRequiredTypeConverters, getTransactionExecutor, getTypeConverter, init, internalInitInvalidationTracker, inTransaction, isOpen, query, query, query, runInTransaction, runInTransaction, setTransactionSuccessful</code></li>
+<h3>Methods inherited from class&nbsp;androidx.room.<a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true" title="class or interface in androidx.room" class="externalLink">RoomDatabase</a></h3>
+<code><a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#assertNotMainThread()" title="class or interface in androidx.room" class="externalLink">assertNotMainThread</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#assertNotSuspendingTransaction()" title="class or interface in androidx.room" class="externalLink">assertNotSuspendingTransaction</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#beginTransaction()" title="class or interface in androidx.room" class="externalLink">beginTransaction</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#clearAllTables()" title="class or interface in androidx.room" class="externalLink">clearAllTables</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#close()" title="class or interface in androidx.room" class="externalLink">close</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#compileStatement(java.lang.String)" title="class or interface in androidx.room" class="externalLink">compileStatement</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#createInvalidationTracker()" title="class or interface in androidx.room" class="externalLink">createInvalidationTracker</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#createOpenHelper(androidx.room.DatabaseConfiguration)" title="class or interface in androidx.room" class="externalLink">createOpenHelper</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#endTransaction()" title="class or interface in androidx.room" class="externalLink">endTransaction</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#getInvalidationTracker()" title="class or interface in androidx.room" class="externalLink">getInvalidationTracker</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#getOpenHelper()" title="class or interface in androidx.room" class="externalLink">getOpenHelper</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#getQueryExecutor()" title="class or interface in androidx.room" class="externalLink">getQueryExecutor</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#getRequiredTypeConverters()" title="class or interface in androidx.room" class="externalLink">getRequiredTypeConverters</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#getTransactionExecutor()" title="class or interface in androidx.room" class="externalLink">getTransactionExecutor</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#getTypeConverter(java.lang.Class)" title="class or interface in androidx.room" class="externalLink">getTypeConverter</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#init(androidx.room.DatabaseConfiguration)" title="class or interface in androidx.room" class="externalLink">init</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#internalInitInvalidationTracker(androidx.sqlite.db.SupportSQLiteDatabase)" title="class or interface in androidx.room" class="externalLink">internalInitInvalidationTracker</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#inTransaction()" title="class or interface in androidx.room" class="externalLink">inTransaction</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#isOpen()" title="class or interface in androidx.room" class="externalLink">isOpen</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#query(androidx.sqlite.db.SupportSQLiteQuery)" title="class or interface in androidx.room" class="externalLink">query</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#query(androidx.sqlite.db.SupportSQLiteQuery,android.os.CancellationSignal)" title="class or interface in androidx.room" class="externalLink">query</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#query(java.lang.String,java.lang.Object%5B%5D)" title="class or interface in androidx.room" class="externalLink">query</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#runInTransaction(java.lang.Runnable)" title="class or interface in androidx.room" class="externalLink">runInTransaction</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#runInTransaction(java.util.concurrent.Callable)" title="class or interface in androidx.room" class="externalLink">runInTransaction</a>, <a href="https://developer.android.com/reference/androidx/room/RoomDatabase.html?is-external=true#setTransactionSuccessful()" title="class or interface in androidx.room" class="externalLink">setTransactionSuccessful</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
+<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -301,7 +306,7 @@ extends androidx.room.RoomDatabase</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setContext</h4>
-<pre class="methodSignature">public static&nbsp;void&nbsp;setContext&#8203;(android.app.Application&nbsp;context)</pre>
+<pre class="methodSignature">public static&nbsp;void&nbsp;setContext&#8203;(<a href="https://developer.android.com/reference/android/app/Application.html?is-external=true" title="class or interface in android.app" class="externalLink">Application</a>&nbsp;context)</pre>
 </li>
 </ul>
 <a id="getInstance()">
@@ -325,10 +330,19 @@ extends androidx.room.RoomDatabase</pre>
 <a id="getIngredientDao()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getIngredientDao</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="../model/dao/IngredientDao.html" title="interface in edu.cnm.deepdive.reciperetriever.model.dao">IngredientDao</a>&nbsp;getIngredientDao()</pre>
+</li>
+</ul>
+<a id="getUserDao()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getUserDao</h4>
+<pre class="methodSignature">public abstract&nbsp;<a href="../model/dao/UserDao.html" title="interface in edu.cnm.deepdive.reciperetriever.model.dao">UserDao</a>&nbsp;getUserDao()</pre>
 </li>
 </ul>
 </li>

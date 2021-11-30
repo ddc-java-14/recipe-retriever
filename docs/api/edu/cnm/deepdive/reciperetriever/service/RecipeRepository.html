@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -119,7 +119,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
+<li><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
 <li>edu.cnm.deepdive.reciperetriever.service.RecipeRepository</li>
@@ -131,7 +131,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <hr>
 <pre>public class <span class="typeNameLabel">RecipeRepository</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+extends <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 </li>
 </ul>
 </div>
@@ -152,7 +152,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">RecipeRepository</a></span>()</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(android.content.Context)">RecipeRepository</a></span>&#8203;(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content" class="externalLink">Context</a>&nbsp;context)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -179,12 +179,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>androidx.lifecycle.LiveData&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;</code></td>
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAll()">getAll</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>androidx.lifecycle.LiveData&lt;<a href="../model/pojo/RecipeWithIngredients.html" title="class in edu.cnm.deepdive.reciperetriever.model.pojo">RecipeWithIngredients</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="../model/pojo/RecipeWithIngredients.html" title="class in edu.cnm.deepdive.reciperetriever.model.pojo">RecipeWithIngredients</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRecipe(long)">getRecipe</a></span>&#8203;(long&nbsp;recipeId)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -193,13 +193,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#save(edu.cnm.deepdive.reciperetriever.model.pojo.RecipeWithIngredients)">save</a></span>&#8203;(<a href="../model/pojo/RecipeWithIngredients.html" title="class in edu.cnm.deepdive.reciperetriever.model.pojo">RecipeWithIngredients</a>&nbsp;recipe)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#search(java.lang.String)">search</a></span>&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;searchTerm)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
+<code><a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang" class="externalLink">clone</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang" class="externalLink">finalize</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -217,13 +222,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;()">
+<a id="&lt;init&gt;(android.content.Context)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>RecipeRepository</h4>
-<pre>public&nbsp;RecipeRepository()</pre>
+<pre>public&nbsp;RecipeRepository&#8203;(<a href="https://developer.android.com/reference/android/content/Context.html?is-external=true" title="class or interface in android.content" class="externalLink">Context</a>&nbsp;context)</pre>
 </li>
 </ul>
 </li>
@@ -251,7 +256,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getRecipe</h4>
-<pre class="methodSignature">public&nbsp;androidx.lifecycle.LiveData&lt;<a href="../model/pojo/RecipeWithIngredients.html" title="class in edu.cnm.deepdive.reciperetriever.model.pojo">RecipeWithIngredients</a>&gt;&nbsp;getRecipe&#8203;(long&nbsp;recipeId)</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="../model/pojo/RecipeWithIngredients.html" title="class in edu.cnm.deepdive.reciperetriever.model.pojo">RecipeWithIngredients</a>&gt;&nbsp;getRecipe&#8203;(long&nbsp;recipeId)</pre>
 </li>
 </ul>
 <a id="getAll()">
@@ -260,16 +265,25 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getAll</h4>
-<pre class="methodSignature">public&nbsp;androidx.lifecycle.LiveData&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;&nbsp;getAll()</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;&nbsp;getAll()</pre>
 </li>
 </ul>
 <a id="delete(edu.cnm.deepdive.reciperetriever.model.entity.Recipe)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>delete</h4>
 <pre class="methodSignature">public&nbsp;io.reactivex.Completable&nbsp;delete&#8203;(<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&nbsp;recipe)</pre>
+</li>
+</ul>
+<a id="search(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>search</h4>
+<pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/entity/Recipe.html" title="class in edu.cnm.deepdive.reciperetriever.model.entity">Recipe</a>&gt;&gt;&nbsp;search&#8203;(<a href="https://developer.android.com/reference/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;searchTerm)</pre>
 </li>
 </ul>
 </li>

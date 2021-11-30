@@ -37,6 +37,10 @@
     app:layout_constraintBottom_toBottomOf="@id/search_text_layout"
     app:layout_constraintEnd_toEndOf="parent"/>
 
+  <ListView
+    android:id="@+id/recipes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 <!--  TODO add views to display search result.-->
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
