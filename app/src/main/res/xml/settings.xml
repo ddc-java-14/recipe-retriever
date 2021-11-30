@@ -10,11 +10,7 @@
     android:defaultValue="@integer/recipe_pref_default"
     app:seekBarIncrement="@integer/recipe_pref_increment"
     app:showSeekBarValue="true"
+    android:icon="@drawable/ic_baseline_list"
     android:title="@string/recipe_pref_title"/>
-
-<!--  <CheckBoxPreference-->
-
-
-
 
 </PreferenceScreen>

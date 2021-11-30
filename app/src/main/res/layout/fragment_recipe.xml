@@ -32,6 +32,7 @@
     android:padding="@dimen/half_dynamic_spacing"
     android:src="@drawable/ic_baseline_search_24"
     android:background="?android:selectableItemBackgroundBorderless"
+    android:tint="@color/black"
     app:layout_constraintTop_toTopOf="@id/search_text_layout"
     app:layout_constraintBottom_toBottomOf="@id/search_text_layout"
     app:layout_constraintEnd_toEndOf="parent"/>
@@ -44,6 +45,7 @@
     android:layout_height="wrap_content"
     app:useCompatPadding="true"
     android:src="@drawable/ic_baseline_favorite"
+    android:tint="#FF0000"
     android:contentDescription="@string/add_favorite"
     android:tooltipText="@string/add_favorite"
     app:layout_constraintBottom_toBottomOf="parent"
