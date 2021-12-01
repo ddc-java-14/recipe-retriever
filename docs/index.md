@@ -7,13 +7,13 @@ order: 0
 
 ## Summary
 
-<i> Recipe Retriever </i> is a simple android app designed for anyone that lets me browse through recipes by the cuisine type or gives me an option to shuffle through the database and pull recipes to select from.
+<i> Recipe Retriever </i> is a simple android app that lets the user: sign into their Google account, search through the database for recipes and selecting the recipe that they would like to see ingredients for, step-by-step breakdown of how to make the recipe and then decide on saving these recipes by pressing the "heart" to save into their Favorite Recipe tab.
 
 ## Intended users
 
 * Someone looking to experiment with their taste buds.
 
-  > As someone bored with the same old recipes, I want an app that lets me pick a recipe based on the cuisine type so that I can try a new recipe outside my culture. 
+  > As someone bored with the same old recipes, I want an app that lets me search for new recipes by typing in a word and choosing from the list, a recipe I would like to make. 
 
 * Someone looking to try a new recipe.
 
@@ -21,11 +21,13 @@ order: 0
 
 ## Functionality
 
-App will have a dropdown button to ask the user to: 
+App will have a search bar that wants the user to: 
 
-  * Select a specific cuisine type.
-  * User will then be able to scroll through different recipes of that cuisine type and chose a recipe they would like to pull the ingredients and instructions for that selected recipe.
-  * User will also receive the macronutrient information for that selected recipe such as the protein, carbs and fat.
+  * Type in a search word:
+    * Chose recipe from the options.
+    * view the ingredients and steps assocaited with that recipe.
+  * User can then favorite the recipe if they desire to.
+  * User will be able to go into the settings and decide how many recipes to show.
 
 ## Persistent data
 
@@ -48,7 +50,7 @@ App will have a dropdown button to ask the user to:
 ## Stretch goals/possible enhancements
 
 * User will be able to save a large amount of recipes on their phone that they can access for later times.
-
+* User will be able to shuffle/ press "random recipe" button to show a list of random recipes to try.
 * User will be able to search for a recipe by the specific ingredient(s) of their choosing.
 
 ## Copyright Notice
