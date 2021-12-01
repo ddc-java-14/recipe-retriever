@@ -22,6 +22,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
   private final List<Recipe> recipes;
 
   /**
+   *
    * @param context
    * @param recipes
    */
