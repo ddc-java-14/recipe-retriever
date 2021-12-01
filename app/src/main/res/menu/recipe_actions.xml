@@ -5,7 +5,7 @@
   <item
     android:id="@+id/new_recipe_search"
     android:title="@string/new_recipe_search"
-    android:icon="@drawable/ic_autorenew"
+    android:icon="@drawable/ic_baseline_search_24"
     app:showAsAction="ifRoom"/>
 
 </menu>

@@ -12,6 +12,9 @@ import edu.cnm.deepdive.reciperetriever.R;
 import edu.cnm.deepdive.reciperetriever.databinding.ActivityLoginBinding;
 import edu.cnm.deepdive.reciperetriever.viewmodel.LoginViewModel;
 
+/**
+ *
+ */
 public class LoginActivity extends AppCompatActivity {
 
   private ActivityLoginBinding binding;

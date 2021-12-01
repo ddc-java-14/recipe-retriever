@@ -12,6 +12,9 @@ import edu.cnm.deepdive.reciperetriever.adapter.RecipeAdapter;
 import edu.cnm.deepdive.reciperetriever.databinding.FragmentFavoriteRecipeBinding;
 import edu.cnm.deepdive.reciperetriever.viewmodel.RecipeViewModel;
 
+/**
+ *
+ */
 public class FavoriteRecipeFragment extends Fragment {
 
   private RecipeViewModel viewModel;

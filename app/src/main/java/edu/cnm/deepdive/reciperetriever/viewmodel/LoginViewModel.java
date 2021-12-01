@@ -16,6 +16,9 @@ import edu.cnm.deepdive.reciperetriever.service.GoogleSignInRepository;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
+/**
+ *
+ */
 public class LoginViewModel extends AndroidViewModel implements DefaultLifecycleObserver {
 
   private final GoogleSignInRepository repository;
@@ -23,6 +26,10 @@ public class LoginViewModel extends AndroidViewModel implements DefaultLifecycle
   private final MutableLiveData<Throwable> throwable;
   private final CompositeDisposable pending;
 
+  /**
+   *
+   * @param application
+   */
   public LoginViewModel(@NonNull Application application) {
     super(application);
     repository = GoogleSignInRepository.getInstance();
@@ -32,14 +39,25 @@ public class LoginViewModel extends AndroidViewModel implements DefaultLifecycle
     refresh();
   }
 
+  /**
+   *
+   * @return
+   */
   public LiveData<GoogleSignInAccount> getAccount() {
     return account;
   }
 
+  /**
+   *
+   * @return
+   */
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
 
+  /**
+   *
+   */
   public void refresh() {
     pending.add(
         repository
@@ -51,10 +69,18 @@ public class LoginViewModel extends AndroidViewModel implements DefaultLifecycle
     );
   }
 
+  /**
+   *
+   * @param launcher
+   */
   public void startSignIn(ActivityResultLauncher<Intent> launcher) {
     repository.startSignIn(launcher);
   }
 
+  /**
+   *
+   * @param result
+   */
   public void completeSignIn(ActivityResult result) {
     Disposable disposable = repository
         .completeSignIn(result)
@@ -65,6 +91,9 @@ public class LoginViewModel extends AndroidViewModel implements DefaultLifecycle
     pending.add(disposable);
   }
 
+  /**
+   *
+   */
   public void signOut() {
     Disposable disposable = repository
         .signOut()

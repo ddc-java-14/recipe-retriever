@@ -17,6 +17,9 @@ import io.reactivex.Single;
 import io.reactivex.SingleOnSubscribe;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ *
+ */
 public class GoogleSignInRepository {
 
   private static final String BEARER_TOKEN_FORMAT = "Bearer %s";
@@ -36,14 +39,26 @@ public class GoogleSignInRepository {
     client = GoogleSignIn.getClient(context, options);
   }
 
+  /**
+   *
+   * @param context
+   */
   public static void setContext(Application context) {
     GoogleSignInRepository.context = context;
   }
 
+  /**
+   *
+   * @return
+   */
   public static GoogleSignInRepository getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   *
+   * @return
+   */
   public Single<GoogleSignInAccount> refresh() {
     return Single
         .create((SingleOnSubscribe<GoogleSignInAccount>) (emitter) ->
@@ -56,15 +71,28 @@ public class GoogleSignInRepository {
         .observeOn(Schedulers.io());
   }
 
+  /**
+   *
+   * @return
+   */
   public Single<String> refreshBearerToken() {
     return refresh()
         .map(this::getBearerToken);
   }
 
+  /**
+   *
+   * @param launcher
+   */
   public void startSignIn(ActivityResultLauncher<Intent> launcher) {
     launcher.launch(client.getSignInIntent());
   }
 
+  /**
+   *
+   * @param result
+   * @return
+   */
   public Single<GoogleSignInAccount> completeSignIn(ActivityResult result) {
     return Single
         .create((SingleOnSubscribe<GoogleSignInAccount>) (emitter) -> {
@@ -81,6 +109,10 @@ public class GoogleSignInRepository {
         .observeOn(Schedulers.io());
   }
 
+  /**
+   *
+   * @return
+   */
   public Completable signOut() {
     return Completable
         .create((emitter) ->

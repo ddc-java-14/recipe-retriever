@@ -8,6 +8,9 @@ import androidx.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
 import java.util.Date;
 
+/**
+ *
+ */
 @Entity(
     tableName = "user",
     indices = {
@@ -35,37 +38,69 @@ public class User {
   @Expose
   private String email;
 
+  /**
+   *
+   * @return
+   */
   public long getId() {
     return id;
   }
 
+  /**
+   *
+   * @param id
+   */
   public void setId(long id) {
     this.id = id;
   }
 
+  /**
+   *
+   * @return
+   */
   @NonNull
   public Date getCreated() {
     return created;
   }
 
+  /**
+   *
+   * @param created
+   */
   public void setCreated(@NonNull Date created) {
     this.created = created;
   }
 
+  /**
+   *
+   * @return
+   */
   @NonNull
   public String getName() {
     return name;
   }
 
+  /**
+   *
+   * @param name
+   */
   public void setName(@NonNull String name) {
     this.name = name;
   }
 
+  /**
+   *
+   * @return
+   */
   @NonNull
   public String getEmail() {
     return email;
   }
 
+  /**
+   *
+   * @param email
+   */
   public void setEmail(@NonNull String email) {
     this.email = email;
   }

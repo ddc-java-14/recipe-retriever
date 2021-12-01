@@ -2,12 +2,15 @@ package edu.cnm.deepdive.reciperetriever.service;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.preference.PreferenceManager;
 import edu.cnm.deepdive.reciperetriever.R;
 import edu.cnm.deepdive.reciperetriever.model.dao.IngredientDao;
 import edu.cnm.deepdive.reciperetriever.model.dao.RecipeDao;
+import edu.cnm.deepdive.reciperetriever.model.dto.ResultsContainer;
+import edu.cnm.deepdive.reciperetriever.model.dto.ResultsContainer.Result;
 import edu.cnm.deepdive.reciperetriever.model.entity.Ingredient;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
 import edu.cnm.deepdive.reciperetriever.model.pojo.RecipeWithIngredients;
@@ -20,6 +23,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ *
+ */
 public class RecipeRepository {
 
   private final WebServiceProxy proxy;
@@ -28,6 +34,10 @@ public class RecipeRepository {
   private final SharedPreferences preferences;
   private final String recipeCountPrefKey;
 
+  /**
+   *
+   * @param context
+   */
   public RecipeRepository(Context context) {
     proxy = WebServiceProxy.getInstance();
     RecipeRetrieverDatabase database = RecipeRetrieverDatabase.getInstance();
@@ -37,6 +47,11 @@ public class RecipeRepository {
     recipeCountPrefKey = context.getString(R.string.recipe_pref_key);
   }
 
+  /**
+   *
+   * @param recipe
+   * @return
+   */
   public Single<RecipeWithIngredients> save(RecipeWithIngredients recipe) {
     Single<RecipeWithIngredients> task;
     if (recipe.getId() == 0) {
@@ -55,14 +70,28 @@ public class RecipeRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  /**
+   *
+   * @param recipeId
+   * @return
+   */
   public LiveData<RecipeWithIngredients> getRecipe(long recipeId) {
     return recipeDao.select(recipeId);
   }
 
+  /**
+   *
+   * @return
+   */
   public LiveData<List<Recipe>> getAll() {
     return recipeDao.selectAll();
   }
 
+  /**
+   *
+   * @param recipe
+   * @return
+   */
   public Completable delete(Recipe recipe) {
     return (recipe.getId() == 0)
         ? Completable.complete()
@@ -72,10 +101,16 @@ public class RecipeRepository {
             .subscribeOn(Schedulers.io());
   }
 
-  public Single<List<Recipe>> search(String searchTerm) {
-    int recipeCount = preferences.getInt(recipeCountPrefKey, R.integer.recipe_pref_default);
+  /**
+   *
+   * @param searchTerm
+   * @return
+   */
+  public Single<List<Result>> search(String searchTerm, int count) {
+    Log.d(getClass().getSimpleName(), searchTerm);
     return proxy
-        .findRecipe("", recipeCount, searchTerm)
+        .findRecipe(searchTerm, count)
+        .map(ResultsContainer::getResults)
         .subscribeOn(Schedulers.io());
   }
   //  TODO add search method for database.

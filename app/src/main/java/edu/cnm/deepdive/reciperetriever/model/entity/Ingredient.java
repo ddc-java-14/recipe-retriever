@@ -9,6 +9,9 @@ import androidx.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
 import java.util.Date;
 
+/**
+ *
+ */
 @Entity(
     tableName = "ingredient",
     foreignKeys = {
@@ -38,36 +41,68 @@ public class Ingredient {
   @ColumnInfo(index = true)
   private Date created;
 
+  /**
+   *
+   * @return
+   */
   public long getId() {
     return id;
   }
 
+  /**
+   *
+   * @param id
+   */
   public void setId(long id) {
     this.id = id;
   }
 
+  /**
+   *
+   * @return
+   */
   public long getRecipeId() {
     return recipeId;
   }
 
+  /**
+   *
+   * @param recipeId
+   */
   public void setRecipeId(long recipeId) {
     this.recipeId = recipeId;
   }
 
+  /**
+   *
+   * @return
+   */
   @NonNull
   public String getName() {
     return name;
   }
 
+  /**
+   *
+   * @param name
+   */
   public void setName(@NonNull String name) {
     this.name = name;
   }
 
+  /**
+   *
+   * @return
+   */
   @NonNull
   public Date getCreated() {
     return created;
   }
 
+  /**
+   *
+   * @param created
+   */
   public void setCreated(@NonNull Date created) {
     this.created = created;
   }

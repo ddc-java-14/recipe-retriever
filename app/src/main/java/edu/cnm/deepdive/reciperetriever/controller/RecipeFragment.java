@@ -1,6 +1,7 @@
 package edu.cnm.deepdive.reciperetriever.controller;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,12 +15,20 @@ import androidx.lifecycle.ViewModelProvider;
 import com.google.android.material.snackbar.Snackbar;
 import edu.cnm.deepdive.reciperetriever.R;
 import edu.cnm.deepdive.reciperetriever.databinding.FragmentRecipeBinding;
+import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
+import edu.cnm.deepdive.reciperetriever.model.pojo.RecipeWithIngredients;
 import edu.cnm.deepdive.reciperetriever.viewmodel.RecipeViewModel;
+import java.util.Arrays;
+import java.util.List;
 
+/**
+ *
+ */
 public class RecipeFragment extends Fragment {
 
   private RecipeViewModel viewModel;
   private FragmentRecipeBinding binding;
+  private List<Recipe> recipeList;
 
   @Override
   public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,10 +36,15 @@ public class RecipeFragment extends Fragment {
 //    setHasOptionsMenu(true);
   }
 
+  @Override
   public View onCreateView(
       @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     binding = FragmentRecipeBinding.inflate(inflater, container, false);
-    binding.search.setOnClickListener((v) -> { /* TODO submitSearch to viewModel */ });
+    binding.search.setOnClickListener((v) -> {
+      /* TODO submitSearch to viewModel */
+      Log.d(getClass().getSimpleName(), "searchCLicked");
+      viewModel.startSearch(binding.searchText.getText().toString().trim());
+    });
     return binding.getRoot();
   }
 
@@ -40,6 +54,11 @@ public class RecipeFragment extends Fragment {
     //noinspection ConstantConditions
     viewModel = new ViewModelProvider(getActivity()).get(RecipeViewModel.class);
     getLifecycle().addObserver(viewModel);
+    viewModel.getSearchResults().observe(getViewLifecycleOwner(), (results) -> {
+      if (results != null) {
+        Log.d(getClass().getSimpleName(), results.toString());
+      }
+    });
     viewModel.getThrowable().observe(getViewLifecycleOwner(), this::displayError);
 //    viewModel.getRecipe().observe(getViewLifecycleOwner(), this::update);
   }
@@ -78,7 +97,6 @@ public class RecipeFragment extends Fragment {
 //  to display the ingredients, picture, instructions, and etc when it's a match.
 
 
-
   private void displayError(Throwable throwable) {
     if (throwable != null) {
       Snackbar snackbar = Snackbar.make(binding.getRoot(),
@@ -88,8 +106,6 @@ public class RecipeFragment extends Fragment {
       snackbar.show();
     }
   }
-
-
 
 
 }

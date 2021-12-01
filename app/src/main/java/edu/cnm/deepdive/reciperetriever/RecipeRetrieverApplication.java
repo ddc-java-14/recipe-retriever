@@ -2,6 +2,7 @@ package edu.cnm.deepdive.reciperetriever;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
+import edu.cnm.deepdive.reciperetriever.service.GoogleSignInRepository;
 import edu.cnm.deepdive.reciperetriever.service.RecipeRetrieverDatabase;
 import io.reactivex.schedulers.Schedulers;
 
@@ -23,6 +24,7 @@ public class RecipeRetrieverApplication extends Application {
         .delete()
         .subscribeOn(Schedulers.io())
         .subscribe();
+    GoogleSignInRepository.setContext(this);
   }
 
 }

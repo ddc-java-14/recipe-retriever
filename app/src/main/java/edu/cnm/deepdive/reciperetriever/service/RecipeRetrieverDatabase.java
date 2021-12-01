@@ -15,6 +15,9 @@ import edu.cnm.deepdive.reciperetriever.model.entity.User;
 import edu.cnm.deepdive.reciperetriever.service.RecipeRetrieverDatabase.Converters;
 import java.util.Date;
 
+/**
+ *
+ */
 @Database(
     entities = {Recipe.class, Ingredient.class, User.class},
     version = 1,
@@ -34,10 +37,22 @@ public abstract class RecipeRetrieverDatabase extends RoomDatabase {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   *
+   * @return
+   */
   public abstract RecipeDao getRecipeDao();
 
+  /**
+   *
+   * @return
+   */
   public abstract IngredientDao getIngredientDao();
 
+  /**
+   *
+   * @return
+   */
   public abstract UserDao getUserDao();
 
   private static  class InstanceHolder {
@@ -47,6 +62,9 @@ public abstract class RecipeRetrieverDatabase extends RoomDatabase {
             .build();
   }
 
+  /**
+   *
+   */
   public static class Converters {
 
     @TypeConverter
@@ -58,9 +76,6 @@ public abstract class RecipeRetrieverDatabase extends RoomDatabase {
     public static Date longToDate(Long value) {
       return (value != null) ? new Date(value) : null;
     }
-
-
-
   }
 
 }

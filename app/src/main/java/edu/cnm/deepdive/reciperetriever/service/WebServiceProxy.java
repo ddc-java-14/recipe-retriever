@@ -1,8 +1,9 @@
 package edu.cnm.deepdive.reciperetriever.service;
 
-import androidx.viewbinding.BuildConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import edu.cnm.deepdive.reciperetriever.BuildConfig;
+import edu.cnm.deepdive.reciperetriever.model.dto.ResultsContainer;
 import edu.cnm.deepdive.reciperetriever.model.entity.Ingredient;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe.CuisineType;
@@ -22,16 +23,49 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
+/**
+ *
+ */
 public interface WebServiceProxy {
 
+  /**
+   *
+   * @param cuisineType
+   * @return
+   */
   @POST("cuisine")
   Single<CuisineType> searchCuisine(@Body CuisineType cuisineType);
 
+  /**
+   *
+   * @param apiKey
+   * @param count
+   * @param searchTerm
+   * @return
+   */
   @GET("complexSearch")
-  Single<List<Recipe>> findRecipe(@Query("apiKey") String apiKey, @Query("number") Integer number, @Query("query") String searchTerm);
+  Single<ResultsContainer> findRecipe(@Query("apiKey") String apiKey, @Query("number") int count, @Query("query") String searchTerm);
 
+  default Single<ResultsContainer> findRecipe(String searchTerm, int count) {
+    return findRecipe(BuildConfig.API_KEY, count, searchTerm);
+  }
+  /**
+   *
+   * @param ingredient
+   * @param id
+   * @return
+   */
   @POST("{id}/information")
   List<Ingredient> findIngredients(@Body Ingredient ingredient, @Path("{recipeId}") long id );
+
+  /**
+   *
+   * @param apiKey
+   * @param value
+   * @return
+   */
+  @GET("{id}/analyzedInstructions")
+  List<Recipe> findRecipeSteps(@Query("apiKey") String apiKey, @Query("stepsBreakdown") Boolean value);
 
   static WebServiceProxy getInstance() {
     return InstanceHolder.INSTANCE;

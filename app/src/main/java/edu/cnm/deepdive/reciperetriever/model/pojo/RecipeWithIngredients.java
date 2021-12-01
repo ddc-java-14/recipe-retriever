@@ -5,6 +5,9 @@ import edu.cnm.deepdive.reciperetriever.model.entity.Ingredient;
 import edu.cnm.deepdive.reciperetriever.model.entity.Recipe;
 import java.util.List;
 
+/**
+ *
+ */
 public class RecipeWithIngredients extends Recipe {
 
   @Relation(
@@ -14,10 +17,18 @@ public class RecipeWithIngredients extends Recipe {
   )
   private List<Ingredient> ingredients;
 
+  /**
+   *
+   * @return
+   */
   public List<Ingredient> getIngredients() {
     return ingredients;
   }
 
+  /**
+   *
+   * @param ingredients
+   */
   public void setIngredients(
       List<Ingredient> ingredients) {
     this.ingredients = ingredients;

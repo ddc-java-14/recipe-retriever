@@ -22,7 +22,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
   private final List<Recipe> recipes;
 
   /**
-   *
    * @param context
    * @param recipes
    */
@@ -49,7 +48,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
     return recipes.size();
   }
 
-  class Holder extends RecyclerView.ViewHolder{
+  class Holder extends RecyclerView.ViewHolder {
 
     private final ItemRecipeBinding binding;
 
@@ -57,8 +56,5 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.Holder> {
       super(binding.getRoot());
       this.binding = binding;
     }
-
   }
-
-
 }
