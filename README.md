@@ -1,4 +1,3 @@
 # Recipe Retriever
 
-This is app is used to first, type in the ingredients you want to be used in your recipe, then select which recipe is
-the one that you want to use. You will also have the ability to save that recipe and many more for future use.
+This is a simple, recipe retreiving app that lets the user find full recipes by typing in a keyword (ingredient) that will be in the recipe. If you like the recipe enough to save it for later, you can "heart" the recipe and it will be saved to the user's database for future use.
